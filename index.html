@@ -206,5 +206,39 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  
+    createChat({
+      webhookUrl: 'https://n8n-lab.alinktech.my.id/webhook/58ab3826-5e74-4a8b-9ca5-f76c185fa433/chat',
+      mode: 'window', // Pilihan: 'window' (popup) atau 'fullscreen'
+      target: '#n8n-chat',
+      showWelcomeScreen: true, 
+      initialMessages: [
+        'Halo! Saya asisten virtual Alink Tech. Ada yang bisa dibantu?'
+      ],
+      i18n: {
+        en: {
+          title: 'Asisten Alink Tech',
+          subtitle: 'Powered by n8n',
+          footer: '',
+          getStarted: 'Mulai Chat',
+          inputPlaceholder: 'Ketik pesan...',
+        },
+      },
+      branding: {
+        logo: '', // Masukkan URL logo perusahaan jika ada
+        backgroundColor: '#2979ff', // Warna header chat
+        textColor: '#ffffff',
+        welcomeScreen: {
+          backgroundColor: '#ffffff',
+          textColor: '#000000',
+        }
+      }
+    });
+  </script>
 </body>
 </html>
+
