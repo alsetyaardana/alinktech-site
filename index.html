@@ -262,39 +262,6 @@
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
-  </script>
-
-  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-  <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-   
-    createChat({
-      webhookUrl: 'https://n8n-lab.alinktech.my.id/webhook/58ab3826-5e74-4a8b-9ca5-f76c185fa433/chat',
-      mode: 'window', 
-      // target: '#n8n-chat', <--- Baris ini DIHAPUS agar menjadi default floating bubble
-      showWelcomeScreen: true, 
-      initialMessages: [
-        'Halo! Saya asisten virtual Alink Tech. Ada yang bisa dibantu?'
-      ],
-      i18n: {
-        en: {
-          title: 'Asisten Alink Tech',
-          subtitle: 'Powered by n8n',
-          footer: '',
-          getStarted: 'Mulai Chat',
-          inputPlaceholder: 'Ketik pesan...',
-        },
-      },
-      branding: {
-        logo: '', 
-        backgroundColor: '#0078d7', // Disesuaikan dengan warna primary web (biru)
-        textColor: '#ffffff',
-        welcomeScreen: {
-          backgroundColor: '#ffffff',
-          textColor: '#000000',
-        }
-      }
-    });
-  </script>
 </body>
 </html>
+
